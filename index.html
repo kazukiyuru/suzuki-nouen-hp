@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鈴木農園HP作成 - デザイン案一覧</title>
+    <meta name="robots" content="noindex, nofollow" />
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        font-family: "Hiragino Sans", "Noto Sans JP", sans-serif;
+        background: #f5f1e8;
+        color: #3a2f28;
+        padding: 48px 24px;
+      }
+      .wrap {
+        max-width: 960px;
+        margin: 0 auto;
+      }
+      h1 {
+        font-size: 28px;
+        margin-bottom: 8px;
+        text-align: center;
+      }
+      p.lead {
+        text-align: center;
+        color: #6b5d4f;
+        margin-bottom: 40px;
+      }
+      .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+      }
+      .card {
+        display: block;
+        background: #fff;
+        border-radius: 12px;
+        padding: 28px 24px;
+        text-decoration: none;
+        color: inherit;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        border-top: 6px solid var(--accent);
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+      }
+      .card h2 {
+        font-size: 20px;
+        margin: 0 0 8px;
+      }
+      .card p {
+        font-size: 14px;
+        line-height: 1.7;
+        color: #6b5d4f;
+        margin: 0;
+      }
+      .v1 { --accent: #a0876f; }
+      .v2 { --accent: #4a7c24; }
+      .v3 { --accent: #a67c52; }
+      footer {
+        text-align: center;
+        margin-top: 48px;
+        font-size: 12px;
+        color: #9a8c7d;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <h1>鈴木農園HP作成</h1>
+      <p class="lead">デザイン案一覧(社内確認用)</p>
+      <div class="cards">
+        <a class="card v1" href="https://suzuki-nouen-version1.yihuigaowei166.workers.dev/">
+          <h2>案1</h2>
+          <p>ブラウン基調の落ち着いた印象。オーナーの経歴を前面に押し出した構成。</p>
+        </a>
+        <a class="card v2" href="https://suzuki-nouen-version2.yihuigaowei166.workers.dev/">
+          <h2>案2</h2>
+          <p>グリーン基調で3つの訴求ポイントを整理。実用性重視のレイアウト。</p>
+        </a>
+        <a class="card v3" href="https://suzuki-nouen-version3.yihuigaowei166.workers.dev/">
+          <h2>案3</h2>
+          <p>和の雰囲気を活かしたストーリーテリング重視のデザイン。</p>
+        </a>
+      </div>
+      <footer>© 2026 Suzuki Farm — 内部確認用ページ</footer>
+    </div>
+  </body>
+</html>
