@@ -417,21 +417,21 @@ export default function App() {
               <div className="relative mb-8">
                 <div className="timeline-dot"></div>
                 <div className="flex items-center gap-4">
-                  <img src={suzukiFutsal} alt="フットサル" className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
+                  <img src={suzukiFutsal} alt="フットサル" className="w-24 h-24 md:w-28 md:h-28 object-cover object-top rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
                   <p className="text-sm text-[#5a4a3a]">フットサル</p>
                 </div>
               </div>
               <div className="relative mb-8">
                 <div className="timeline-dot"></div>
                 <div className="flex items-center gap-4">
-                  <img src={suzukiTrailrunForest} alt="トレイルランニング" className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
+                  <img src={suzukiTrailrunForest} alt="トレイルランニング" className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
                   <p className="text-sm text-[#5a4a3a]">トレイルランニング</p>
                 </div>
               </div>
               <div className="relative">
                 <div className="timeline-dot"></div>
                 <div className="flex items-center gap-4">
-                  <img src={suzukiTrailrun} alt="トレイルランニング ゴール" className="w-16 h-16 md:w-20 md:h-20 object-cover rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
+                  <img src={suzukiTrailrun} alt="トレイルランニング ゴール" className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
                   <p className="text-sm text-[#5a4a3a]">トレイルランニング(ゴール)</p>
                 </div>
               </div>
