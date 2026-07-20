@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Instagram, MapPin, Clock, Users, Leaf, ChevronDown } from 'lucide-react';
 import { ImageWithFallback } from './components/figma/ImageWithFallback';
+import grapeHarvest from '../assets/grape-harvest.jpg';
 import kidsFarmExperience from '../assets/kids-farm-experience.jpg';
 import unmannedStandExterior from '../assets/unmanned-stand-exterior.jpg';
 import unmannedStandShelf from '../assets/unmanned-stand-shelf.jpg';
@@ -283,9 +284,9 @@ export default function App() {
 
       {/* Hero Section */}
       <section id="top" className="pt-20 scroll-mt-20">
-        <div className="relative h-[600px]">
+        <div className="relative h-[400px] md:h-[600px]">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1638402268441-9368026c1d45?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx1cmJhbiUyMGZhcm0lMjB2ZWdldGFibGVzfGVufDF8fHx8MTc3MzY1Mzc5M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src={grapeHarvest}
             alt="鈴木農園"
             className="w-full h-full object-cover kenburns"
           />
@@ -294,7 +295,7 @@ export default function App() {
               <div className="max-w-2xl hero-fade-in">
                 <div className="flex md:flex-row flex-col items-center md:items-start gap-4 mb-6">
                   <img src={veggieLogo} alt="鈴木農園ロゴ" className="h-24 w-24" style={{ mixBlendMode: 'screen' }} />
-                  <h2 className="text-6xl font-bold text-center md:text-left">鈴木農園</h2>
+                  <h2 className="text-4xl md:text-6xl font-bold text-center md:text-left">鈴木農園</h2>
                 </div>
                 
                 <p className="text-xl opacity-90 text-center md:text-left">東京都世田谷区等々力 | 都会の農園</p>
@@ -329,7 +330,7 @@ export default function App() {
               </p>
             </div>
             <div className="reveal bg-white p-8 rounded-lg shadow-sm border border-gray-200 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <div className="text-6xl mb-4">🍇</div>
+              <div className="text-6xl mb-4" aria-hidden="true">🍇</div>
               <h4 className="text-2xl font-semibold text-[#2d5016] mb-4">自慢のブドウ</h4>
               <p className="text-gray-700 leading-relaxed">甘くて美味しいブドウを、こだわりの栽培方法で生産。</p>
             </div>
@@ -356,7 +357,7 @@ export default function App() {
           <div className="reveal grid md:grid-cols-2 gap-12 items-center mb-16">
             <div className="order-2 md:order-1">
               <h3 className="text-4xl font-semibold text-[#2d5016] mb-6">
-                <span className="md:inline block text-center md:text-left">鈴木 太郎</span>
+                <span className="md:inline block text-center md:text-left">鈴木紳一郎</span>
                 <span className="md:inline block text-center md:text-left">（農園主）</span>
               </h3>
               <p className="text-lg text-gray-700 mb-4 leading-relaxed">
@@ -374,11 +375,11 @@ export default function App() {
                 地域貢献活動にも力を入れています。
               </p>
             </div>
-            <div className="order-1 md:order-2 relative h-[500px] rounded-lg overflow-hidden shadow-lg">
+            <div className="order-1 md:order-2 relative h-[320px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
               <ImageWithFallback
                 loading="lazy"
                 src={suzukiTrailrun}
-                alt="鈴木太郎"
+                alt="鈴木紳一郎"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -386,28 +387,24 @@ export default function App() {
 
           <div className="reveal mb-16">
             <p className="text-sm text-gray-500 mb-6 text-center">スポーツ歴</p>
-            <div className="relative pl-8 max-w-md mx-auto">
-              <div className="timeline-track"></div>
-              <div className="relative mb-8">
-                <div className="timeline-dot"></div>
-                <div className="flex items-center gap-4">
-                  <img src={suzukiFutsal} alt="フットサル" className="w-24 h-24 md:w-28 md:h-28 object-cover object-top rounded-lg shadow-sm flex-shrink-0" loading="lazy" />
-                  <p className="text-sm text-gray-600">フットサル</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+              <div className="rounded-lg overflow-hidden shadow-sm bg-white">
+                <div className="h-40 md:h-48">
+                  <img src={suzukiFutsal} alt="フットサル" className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
+                <p className="text-sm text-gray-600 text-center py-2">フットサル</p>
               </div>
-              <div className="relative mb-8">
-                <div className="timeline-dot"></div>
-                <div className="flex items-center gap-4">
-                  <img src={suzukiTrailrunForest} alt="トレイルランニング" className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-lg shadow-sm flex-shrink-0" loading="lazy" />
-                  <p className="text-sm text-gray-600">トレイルランニング</p>
+              <div className="rounded-lg overflow-hidden shadow-sm bg-white">
+                <div className="h-40 md:h-48">
+                  <img src={suzukiTrailrunForest} alt="トレイルランニング" className="w-full h-full object-cover" loading="lazy" />
                 </div>
+                <p className="text-sm text-gray-600 text-center py-2">トレイルランニング</p>
               </div>
-              <div className="relative">
-                <div className="timeline-dot"></div>
-                <div className="flex items-center gap-4">
-                  <img src={suzukiMountain} alt="登山" className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-lg shadow-sm flex-shrink-0" loading="lazy" />
-                  <p className="text-sm text-gray-600">登山</p>
+              <div className="rounded-lg overflow-hidden shadow-sm bg-white">
+                <div className="h-40 md:h-48">
+                  <img src={suzukiMountain} alt="登山" className="w-full h-full object-cover" loading="lazy" />
                 </div>
+                <p className="text-sm text-gray-600 text-center py-2">登山</p>
               </div>
             </div>
           </div>
@@ -426,7 +423,7 @@ export default function App() {
                 その後社会人サッカーを経て、現在はIT業界への再就職を目指しながら若者支援のNPO団体サンカクシャのフットサル部が始動し、副部長として携わっている。
               </p>
             </div>
-            <div className="relative h-[500px] rounded-lg overflow-hidden shadow-lg">
+            <div className="relative h-[320px] md:h-[500px] rounded-lg overflow-hidden shadow-lg">
               <img
                 loading="lazy"
                 src={takaoPhoto}
@@ -661,9 +658,9 @@ export default function App() {
               <img src={veggieLogo} alt="鈴木農園ロゴ" className="h-12 w-12" style={{ mixBlendMode: 'screen' }} />
               <p className="text-2xl font-semibold">鈴木農園</p>
             </div>
-            <p className="opacity-75">Fresh & Local Farm in Setagaya</p>
+            <p className="opacity-95">Fresh & Local Farm in Setagaya</p>
           </div>
-          <div className="text-center opacity-75">
+          <div className="text-center opacity-95 text-sm">
             <p>© 2026 Suzuki Farm. All rights reserved.</p>
           </div>
         </div>

@@ -286,9 +286,9 @@ export default function App() {
 
       {/* Hero Section */}
       <section id="top" className="pt-20 scroll-mt-20">
-        <div className="relative h-[650px]">
+        <div className="relative h-[420px] md:h-[650px]">
           <ImageWithFallback
-            src="https://images.unsplash.com/photo-1756638425687-64a8f76c9368?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXJtJTIwZmllbGQlMjBsYW5kc2NhcGV8ZW58MXx8fHwxNzczNjUzNzkzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+            src={unmannedStandExterior}
             alt="鈴木農園の風景"
             className="w-full h-full object-cover opacity-90 kenburns"
           />
@@ -296,12 +296,12 @@ export default function App() {
             <div className="max-w-7xl mx-auto px-6 pb-16 text-white hero-fade-in">
               <div className="flex md:flex-row flex-col items-center md:items-start gap-4 mb-6">
                 <img src={veggieLogo} alt="鈴木農園ロゴ" className="h-24 w-24" />
-                <h2 className="text-7xl text-center md:text-left" style={{ fontFamily: '"Zen Antique", serif' }}>
+                <h2 className="text-4xl md:text-7xl text-center md:text-left" style={{ fontFamily: '"Zen Antique", serif' }}>
                   鈴木農園
                 </h2>
               </div>
               <p className="text-2xl mb-3 opacity-95 text-center md:text-left">心を込めて育てる、土の恵み</p>
-              <p className="text-xl opacity-85 text-center md:text-left">東京都世田谷区等々力</p>
+              <p className="text-xl opacity-95 text-center md:text-left">東京都世田谷区等々力</p>
             </div>
           </div>
         </div>
@@ -331,7 +331,7 @@ export default function App() {
           </div>
           
           <div className="reveal grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[450px] rounded-sm overflow-hidden shadow-md">
+            <div className="relative h-[300px] md:h-[450px] rounded-sm overflow-hidden shadow-md">
               <ImageWithFallback
                 loading="lazy"
                 src={grapeHarvest}
@@ -376,11 +376,11 @@ export default function App() {
             <div className="reveal underline-grow w-16 h-0.5 bg-[#a67c52] mx-auto mb-8"></div>
           </div>
           
-          {/* 鈴木太郎 */}
+          {/* 鈴木紳一郎 */}
           <div className="reveal grid md:grid-cols-2 gap-16 items-center mb-20">
             <div className="order-2 md:order-1">
               <h3 className="text-4xl text-[#6b5544] mb-6">
-                <span className="md:inline block text-center md:text-left">鈴木 太郎</span>
+                <span className="md:inline block text-center md:text-left">鈴木紳一郎</span>
                 <span className="md:inline block text-center md:text-left">（農園主）</span>
               </h3>
               <div className="space-y-5 text-lg text-[#5a4a3a] leading-relaxed">
@@ -400,11 +400,11 @@ export default function App() {
                 </p>
               </div>
             </div>
-            <div className="order-1 md:order-2 relative h-[550px] rounded-sm overflow-hidden shadow-md">
+            <div className="order-1 md:order-2 relative h-[350px] md:h-[550px] rounded-sm overflow-hidden shadow-md">
               <ImageWithFallback
                 loading="lazy"
                 src={suzukiMountain}
-                alt="鈴木太郎"
+                alt="鈴木紳一郎"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -412,35 +412,31 @@ export default function App() {
 
           <div className="reveal mb-20">
             <p className="text-sm text-[#8b7355] mb-6 text-center">スポーツ歴</p>
-            <div className="relative pl-8 max-w-md mx-auto">
-              <div className="timeline-track"></div>
-              <div className="relative mb-8">
-                <div className="timeline-dot"></div>
-                <div className="flex items-center gap-4">
-                  <img src={suzukiFutsal} alt="フットサル" className="w-24 h-24 md:w-28 md:h-28 object-cover object-top rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
-                  <p className="text-sm text-[#5a4a3a]">フットサル</p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-3xl mx-auto">
+              <div className="rounded-sm overflow-hidden shadow-sm bg-white">
+                <div className="h-40 md:h-48">
+                  <img src={suzukiFutsal} alt="フットサル" className="w-full h-full object-cover object-top" loading="lazy" />
                 </div>
+                <p className="text-sm text-[#5a4a3a] text-center py-2">フットサル</p>
               </div>
-              <div className="relative mb-8">
-                <div className="timeline-dot"></div>
-                <div className="flex items-center gap-4">
-                  <img src={suzukiTrailrunForest} alt="トレイルランニング" className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
-                  <p className="text-sm text-[#5a4a3a]">トレイルランニング</p>
+              <div className="rounded-sm overflow-hidden shadow-sm bg-white">
+                <div className="h-40 md:h-48">
+                  <img src={suzukiTrailrunForest} alt="トレイルランニング" className="w-full h-full object-cover" loading="lazy" />
                 </div>
+                <p className="text-sm text-[#5a4a3a] text-center py-2">トレイルランニング</p>
               </div>
-              <div className="relative">
-                <div className="timeline-dot"></div>
-                <div className="flex items-center gap-4">
-                  <img src={suzukiTrailrun} alt="トレイルランニング ゴール" className="w-24 h-24 md:w-28 md:h-28 object-cover rounded-sm shadow-sm flex-shrink-0" loading="lazy" />
-                  <p className="text-sm text-[#5a4a3a]">トレイルランニング(ゴール)</p>
+              <div className="rounded-sm overflow-hidden shadow-sm bg-white">
+                <div className="h-40 md:h-48">
+                  <img src={suzukiTrailrun} alt="トレイルランニング ゴール" className="w-full h-full object-cover" loading="lazy" />
                 </div>
+                <p className="text-sm text-[#5a4a3a] text-center py-2">トレイルランニング(ゴール)</p>
               </div>
             </div>
           </div>
 
           {/* 高尾一輝 */}
           <div className="reveal grid md:grid-cols-2 gap-16 items-center">
-            <div className="relative h-[550px] rounded-sm overflow-hidden shadow-md">
+            <div className="relative h-[350px] md:h-[550px] rounded-sm overflow-hidden shadow-md">
               <img
                 loading="lazy"
                 src={takaoImage}
@@ -478,7 +474,7 @@ export default function App() {
 
             <div className="reveal mb-20">
               <div className="grid md:grid-cols-2 gap-16 items-center">
-                <div className="relative h-[400px] rounded-sm overflow-hidden shadow-md">
+                <div className="relative h-[280px] md:h-[400px] rounded-sm overflow-hidden shadow-md">
                   <ImageWithFallback
                     loading="lazy"
                     src={kidsFarmExperience}
@@ -535,7 +531,7 @@ export default function App() {
                     </p>
                   </div>
                 </div>
-                <div className="order-1 md:order-2 relative h-[400px] rounded-sm overflow-hidden shadow-md">
+                <div className="order-1 md:order-2 relative h-[280px] md:h-[400px] rounded-sm overflow-hidden shadow-md">
                   <ImageWithFallback
                     loading="lazy"
                     src={unmannedStandExterior}
@@ -711,9 +707,9 @@ export default function App() {
                 鈴木農園
               </p>
             </div>
-            <p className="opacity-75 text-lg">心を込めて、土の恵みを</p>
+            <p className="opacity-95 text-lg">心を込めて、土の恵みを</p>
           </div>
-          <div className="text-center opacity-75">
+          <div className="text-center opacity-95 text-sm">
             <p>© 2026 Suzuki Farm. All rights reserved.</p>
           </div>
         </div>
